@@ -1,5 +1,8 @@
-const Tour = ({image, info, name, price}) =>{
+import {useState} from 'react'
 
+const Tour = ({id,image, info, name, price}) =>{
+
+  const [showMore, setShowMore] = useState(true);
 
     return(
         <article className="single-tour">
@@ -10,9 +13,11 @@ const Tour = ({image, info, name, price}) =>{
             <h4 className="tour-price">${price}</h4>
           </div>
           <p>
-            {info}
-          </p>
+            {showMore? info : `${info.substring(0,200)}...`}
+            </p>
         </footer>
+        <button className="btn" onClick={()=> setShowMore(!showMore)}>{showMore? ` show less` : ` show more`}</button>
+          
       </article>
     );
 }
