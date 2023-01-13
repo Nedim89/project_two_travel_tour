@@ -2,6 +2,9 @@ button.btn{
     width: 200px;
     margin: auto;
 }
+label {
+  cursor: pointer;
+}
 
 h2{
 text-align: center;
