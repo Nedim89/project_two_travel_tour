@@ -6,6 +6,17 @@ label {
   cursor: pointer;
 }
 
+label:hover{
+  color: blue;
+}
+
+.btn-remove-tour{
+  padding: 14px;
+  background: red;
+  margin: auto;
+  width: 50%;
+}
+
 h2{
 text-align: center;
 vertical-align: center;
@@ -20,4 +31,10 @@ img{
 .img-wrapper{
 
   text-align: center;
+}
+
+.tour-info{
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
 }

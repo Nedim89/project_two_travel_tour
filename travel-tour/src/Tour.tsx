@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const Tour = ({id,image, info, name, price}) =>{
+const Tour = ({id,image, info, name, price, removeTour}) =>{
 
   const [showMore, setShowMore] = useState(false);
 
@@ -17,7 +17,7 @@ const Tour = ({id,image, info, name, price}) =>{
             {showMore? info : `${info.substring(0,200)}...`}
             <label className="btn" onClick={()=> setShowMore(!showMore)}>{showMore? ` show less` : ` show more`}</label>
             </p>
-          
+            <button onClick={()=>removeTour(id)} className="btn-remove-tour" data-tooltip="Remove this result!">I'm not interested</button>
       </article>
     );
 }
