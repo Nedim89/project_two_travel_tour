@@ -9,6 +9,8 @@ function App() {
   const [tours, setTours] = useState([]);
   const [loading, setLoading] = useState(true);
 
+ 
+
   const removeTour = (id) => {
     const newTours = tours.filter ((tour) => tour.id !== id)
     setTours(newTours);
@@ -22,20 +24,18 @@ function App() {
     setLoading(false);
  };
 
-
-
  useEffect(()=> {
   fetchTours();
  },[]);
 
- //if (tours.length = []) return
- //window.location.reload(false);
+
 
 
   return (
     <>
     {loading? <h1>LOADING ...</h1> :  
-     <Tours tours={tours} removeTour={removeTour} />} 
+              <Tours tours={tours} removeTour={removeTour} />}
+    {tours.length === 0? <button style={{width: "36%", margin: "auto"}} onClick={fetchTours}>Fetch all travel tours</button> : null} 
     </>
   )
 }
