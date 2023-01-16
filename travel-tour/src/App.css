@@ -1,7 +1,30 @@
+article{
+  -webkit-text-stroke-width: medium;
+}
+
+body{
+  background-color: lightyellow;
+
+
+}
+article.single-tour{
+  margin: 20px;
+  background: rgb(227 237 228);
+}
+
+.wrapper-a{
+  width: 75%;
+  margin: auto;
+}
+
 button.btn{
     width: 200px;
     margin: auto;
 }
+label.btn{
+  color:red;
+}
+
 label {
   cursor: pointer;
 }
@@ -20,12 +43,12 @@ label:hover{
 h2{
 text-align: center;
 vertical-align: center;
-
+margin-bottom: 10px;
 
 }
 
 img{
-  height: 45vh;
+  height: 75%;
 }
 
 .img-wrapper{
@@ -33,8 +56,24 @@ img{
   text-align: center;
 }
 
-.tour-info{
-  display: flex;
-  justify-content: space-around;
-  padding: 0;
+.tour-info {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    margin: auto;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+  .tour-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+  img{
+    width: 100%;
+  }
+  header{
+    width: 100%;
+  }
 }

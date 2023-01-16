@@ -6,7 +6,8 @@ const Tour = ({id,image, info, name, price, removeTour}) =>{
 
     return(
         <article className="single-tour">
-        <header>
+          <div className="wrapper-a">
+          <header>
         <img src={image} alt={name} />
         </header>
           <div className="tour-info">
@@ -18,7 +19,8 @@ const Tour = ({id,image, info, name, price, removeTour}) =>{
             <label className="btn" onClick={()=> setShowMore(!showMore)}>{showMore? ` show less` : ` show more`}</label>
             </p>
             <button onClick={()=>removeTour(id)} className="btn-remove-tour" data-tooltip="Remove this result!">I'm not interested</button>
-      </article>
+          </div>
+          </article>
     );
 }
 
